@@ -1,0 +1,16 @@
+{
+	"gaussian_chart" : [
+		{
+			"rootsection" : "#p opt b3lyp/genecp scrf=(cpcm,solvent=acetonitrile) nosymm",
+			"basis" : {
+				"C" : "6-31+g",
+				"N" : "6-31+g",
+				"Ni" : [ "lanl2dz", "lanl2dz" ]
+			}
+		},
+		{
+			"rootsection" : "#p opt freq b3lyp/6-31+g(d,p) scrf=(cpcm,solvent=acetonitrile) nosymm"
+		}
+	]
+
+}

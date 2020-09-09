@@ -1,0 +1,39 @@
+{
+	"molecule" : {
+		"file" : "*.csv",
+		"format" : "smiles",
+		"charge" : [0,1],
+		"spin" : "auto"
+	},
+
+	"generalplan" : {
+		"method" : "b3lyp",
+		"scrf" : {
+			"model" : "cpcm",
+			"solvent" : "acetonitrile"
+		},
+		"others" : "nosymm",
+		"nprocshared" : 2,
+		"mem" : "8GB"
+	},
+
+	"plan" : [
+		{
+			"jobtype" : "opt",
+			"basis" : "genecp",
+			"genecp" : {
+				"C" : "6-31+g",
+				"H" : "6-31g",
+				"O" : "6-31+g(d,p)",
+				"N" : "6-31+g",
+				"Ni" : [ "lanl2dz", "lanl2dz" ]
+			}
+		},
+		{
+			"jobtype" : "",
+			"basis" : "6-31+g(d,p)",
+			"others" : "nosymm hogehoge"
+		}
+	]
+
+}
