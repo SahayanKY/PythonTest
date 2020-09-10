@@ -1,9 +1,10 @@
 from rdkit import Chem
 from rdkit.Chem import Descriptors
 
-spl = Chem.SDMolSupplier('errorsample.sdf')
+spl = Chem.SDMolSupplier('hoge.sdf')
 mws = []
 for mol in spl:
+    print(mol is None)
     mws.append(Descriptors.MolWt(mol))
 
 print('number of compounds=%d' % len(mws))
